@@ -1,0 +1,121 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "AI agents directory",
+  "type": "object",
+  "required": [
+    "agents"
+  ],
+  "properties": {
+    "agents": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "name",
+          "operator",
+          "class",
+          "userAgentTokens",
+          "robotsTokens",
+          "respectsRobots",
+          "purpose"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "description": "Stable id: operator-agent"
+          },
+          "name": {
+            "type": "string"
+          },
+          "operator": {
+            "type": "string",
+            "description": "Company that runs the agent"
+          },
+          "class": {
+            "enum": [
+              "training_crawler",
+              "ai_search_crawler",
+              "user_action_agent",
+              "agentic_browser",
+              "coding_agent",
+              "search_engine",
+              "preview_fetcher",
+              "ads_checker"
+            ]
+          },
+          "userAgentTokens": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "Tokens that appear in its User-Agent"
+          },
+          "robotsTokens": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "User-agent names it obeys in robots.txt"
+          },
+          "respectsRobots": {
+            "enum": [
+              "yes",
+              "partial",
+              "no",
+              "unknown"
+            ]
+          },
+          "purpose": {
+            "type": "string"
+          },
+          "published": {
+            "type": "object",
+            "description": "What the operator publishes to recognise its agent",
+            "properties": {
+              "ipRangeUrls": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "format": "uri"
+                }
+              },
+              "reverseDnsSuffixes": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "signatureAgents": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                },
+                "description": "Signature-Agent values (Web Bot Auth)"
+              }
+            }
+          },
+          "docsUrl": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "format": "uri",
+            "description": "The operator's official documentation"
+          },
+          "checkedAt": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": "When the entry was last checked against docsUrl"
+          },
+          "page": {
+            "type": "string",
+            "format": "uri"
+          }
+        }
+      }
+    }
+  }
+}

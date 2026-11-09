@@ -1,0 +1,536 @@
+{
+  "$schema": "./schema.json",
+  "source": "https://knocklog.ai/agents",
+  "license": "CC-BY-4.0",
+  "checkedAt": "2026-11-04",
+  "count": 26,
+  "agents": [
+    {
+      "id": "openai-gptbot",
+      "name": "GPTBot",
+      "operator": "OpenAI",
+      "class": "training_crawler",
+      "userAgentTokens": [
+        "GPTBot"
+      ],
+      "robotsTokens": [
+        "GPTBot"
+      ],
+      "respectsRobots": "yes",
+      "purpose": "Crawls content that may be used to train OpenAI's generative AI foundation models.",
+      "published": {
+        "ipRangeUrls": [
+          "https://openai.com/gptbot.json"
+        ]
+      },
+      "docsUrl": "https://developers.openai.com/api/docs/bots",
+      "checkedAt": "2026-11-04",
+      "page": "https://knocklog.ai/agents/openai-gptbot"
+    },
+    {
+      "id": "openai-oai-searchbot",
+      "name": "OAI-SearchBot",
+      "operator": "OpenAI",
+      "class": "ai_search_crawler",
+      "userAgentTokens": [
+        "OAI-SearchBot"
+      ],
+      "robotsTokens": [
+        "OAI-SearchBot"
+      ],
+      "respectsRobots": "yes",
+      "purpose": "Surfaces websites in ChatGPT search results.",
+      "published": {
+        "ipRangeUrls": [
+          "https://openai.com/searchbot.json"
+        ]
+      },
+      "docsUrl": "https://developers.openai.com/api/docs/bots",
+      "checkedAt": "2026-11-04",
+      "page": "https://knocklog.ai/agents/openai-oai-searchbot"
+    },
+    {
+      "id": "openai-oai-adsbot",
+      "name": "OAI-AdsBot",
+      "operator": "OpenAI",
+      "class": "ads_checker",
+      "userAgentTokens": [
+        "OAI-AdsBot"
+      ],
+      "robotsTokens": [
+        "OAI-AdsBot"
+      ],
+      "respectsRobots": "unknown",
+      "purpose": "Checks landing pages submitted as ads on ChatGPT.",
+      "published": {
+        "ipRangeUrls": [
+          "https://openai.com/adsbot.json"
+        ]
+      },
+      "docsUrl": "https://developers.openai.com/api/docs/bots",
+      "checkedAt": "2026-11-04",
+      "page": "https://knocklog.ai/agents/openai-oai-adsbot"
+    },
+    {
+      "id": "openai-chatgpt-user",
+      "name": "ChatGPT-User",
+      "operator": "OpenAI",
+      "class": "user_action_agent",
+      "userAgentTokens": [
+        "ChatGPT-User"
+      ],
+      "robotsTokens": [
+        "ChatGPT-User"
+      ],
+      "respectsRobots": "partial",
+      "purpose": "Visits pages when ChatGPT or Custom GPT users ask questions or use GPT Actions.",
+      "published": {
+        "ipRangeUrls": [
+          "https://openai.com/chatgpt-user.json"
+        ]
+      },
+      "docsUrl": "https://developers.openai.com/api/docs/bots",
+      "checkedAt": "2026-11-04",
+      "page": "https://knocklog.ai/agents/openai-chatgpt-user"
+    },
+    {
+      "id": "openai-chatgpt-agent",
+      "name": "ChatGPT agent",
+      "operator": "OpenAI",
+      "class": "agentic_browser",
+      "userAgentTokens": [],
+      "robotsTokens": [],
+      "respectsRobots": "unknown",
+      "purpose": "ChatGPT's browsing agent; identified by RFC 9421 signatures, not by User-Agent.",
+      "published": {
+        "signatureAgents": [
+          "https://chatgpt.com"
+        ]
+      },
+      "docsUrl": "https://help.openai.com/en/articles/11845367-chatgpt-agent-allowlisting",
+      "checkedAt": "2026-11-04",
+      "page": "https://knocklog.ai/agents/openai-chatgpt-agent"
+    },
+    {
+      "id": "anthropic-claude-searchbot",
+      "name": "Claude-SearchBot",
+      "operator": "Anthropic",
+      "class": "ai_search_crawler",
+      "userAgentTokens": [
+        "Claude-SearchBot"
+      ],
+      "robotsTokens": [
+        "Claude-SearchBot"
+      ],
+      "respectsRobots": "yes",
+      "purpose": "Crawls the web to improve the quality of Claude's search results.",
+      "published": {
+        "ipRangeUrls": [
+          "https://claude.com/crawling/bots.json"
+        ]
+      },
+      "docsUrl": "https://support.claude.com/en/articles/8896518-does-anthropic-crawl-data-from-the-web-and-how-can-site-owners-block-the-crawler",
+      "checkedAt": "2026-11-04",
+      "page": "https://knocklog.ai/agents/anthropic-claude-searchbot"
+    },
+    {
+      "id": "anthropic-claude-user",
+      "name": "Claude-User",
+      "operator": "Anthropic",
+      "class": "user_action_agent",
+      "userAgentTokens": [
+        "Claude-User"
+      ],
+      "robotsTokens": [
+        "Claude-User"
+      ],
+      "respectsRobots": "yes",
+      "purpose": "Fetches pages when a Claude user asks a question.",
+      "published": {
+        "ipRangeUrls": [
+          "https://claude.com/crawling/bots.json"
+        ]
+      },
+      "docsUrl": "https://support.claude.com/en/articles/8896518-does-anthropic-crawl-data-from-the-web-and-how-can-site-owners-block-the-crawler",
+      "checkedAt": "2026-11-04",
+      "page": "https://knocklog.ai/agents/anthropic-claude-user"
+    },
+    {
+      "id": "anthropic-claudebot",
+      "name": "ClaudeBot",
+      "operator": "Anthropic",
+      "class": "training_crawler",
+      "userAgentTokens": [
+        "ClaudeBot"
+      ],
+      "robotsTokens": [
+        "ClaudeBot"
+      ],
+      "respectsRobots": "yes",
+      "purpose": "Collects web content that could contribute to training Anthropic's models.",
+      "published": {
+        "ipRangeUrls": [
+          "https://claude.com/crawling/bots.json"
+        ]
+      },
+      "docsUrl": "https://support.claude.com/en/articles/8896518-does-anthropic-crawl-data-from-the-web-and-how-can-site-owners-block-the-crawler",
+      "checkedAt": "2026-11-04",
+      "page": "https://knocklog.ai/agents/anthropic-claudebot"
+    },
+    {
+      "id": "perplexity-user",
+      "name": "Perplexity-User",
+      "operator": "Perplexity",
+      "class": "user_action_agent",
+      "userAgentTokens": [
+        "Perplexity-User"
+      ],
+      "robotsTokens": [
+        "Perplexity-User"
+      ],
+      "respectsRobots": "no",
+      "purpose": "Fetches pages when a Perplexity user asks a question; generally ignores robots.txt.",
+      "published": {
+        "ipRangeUrls": [
+          "https://www.perplexity.com/perplexity-user.json"
+        ]
+      },
+      "docsUrl": "https://docs.perplexity.ai/docs/resources/perplexity-crawlers",
+      "checkedAt": "2026-11-04",
+      "page": "https://knocklog.ai/agents/perplexity-user"
+    },
+    {
+      "id": "perplexity-perplexitybot",
+      "name": "PerplexityBot",
+      "operator": "Perplexity",
+      "class": "ai_search_crawler",
+      "userAgentTokens": [
+        "PerplexityBot"
+      ],
+      "robotsTokens": [
+        "PerplexityBot"
+      ],
+      "respectsRobots": "yes",
+      "purpose": "Surfaces and links websites in Perplexity search results.",
+      "published": {
+        "ipRangeUrls": [
+          "https://www.perplexity.com/perplexitybot.json"
+        ]
+      },
+      "docsUrl": "https://docs.perplexity.ai/docs/resources/perplexity-crawlers",
+      "checkedAt": "2026-11-04",
+      "page": "https://knocklog.ai/agents/perplexity-perplexitybot"
+    },
+    {
+      "id": "google-agent",
+      "name": "Google-Agent",
+      "operator": "Google",
+      "class": "agentic_browser",
+      "userAgentTokens": [
+        "Google-Agent"
+      ],
+      "robotsTokens": [],
+      "respectsRobots": "unknown",
+      "purpose": "Agents hosted on Google infrastructure that navigate the web and act on user request.",
+      "published": {
+        "ipRangeUrls": [
+          "https://developers.google.com/static/crawling/ipranges/user-triggered-agents.json"
+        ],
+        "signatureAgents": [
+          "https://agent.bot.goog"
+        ]
+      },
+      "docsUrl": "https://developers.google.com/crawling/docs/crawlers-fetchers/google-agent",
+      "checkedAt": "2026-11-04",
+      "page": "https://knocklog.ai/agents/google-agent"
+    },
+    {
+      "id": "google-extended",
+      "name": "Google-Extended",
+      "operator": "Google",
+      "class": "training_crawler",
+      "userAgentTokens": [],
+      "robotsTokens": [
+        "Google-Extended"
+      ],
+      "respectsRobots": "yes",
+      "purpose": "robots.txt token controlling use of content for Gemini training and grounding; no separate crawler.",
+      "published": {},
+      "docsUrl": null,
+      "checkedAt": "2026-11-04",
+      "page": "https://knocklog.ai/agents/google-extended"
+    },
+    {
+      "id": "google-googlebot",
+      "name": "Googlebot",
+      "operator": "Google",
+      "class": "search_engine",
+      "userAgentTokens": [
+        "Googlebot"
+      ],
+      "robotsTokens": [
+        "Googlebot"
+      ],
+      "respectsRobots": "yes",
+      "purpose": "Google Search crawler; its index also feeds Google's AI features.",
+      "published": {
+        "ipRangeUrls": [
+          "https://developers.google.com/static/crawling/ipranges/common-crawlers.json"
+        ],
+        "reverseDnsSuffixes": [
+          ".googlebot.com",
+          ".google.com"
+        ]
+      },
+      "docsUrl": "https://developers.google.com/crawling/ipranges/",
+      "checkedAt": "2026-11-04",
+      "page": "https://knocklog.ai/agents/google-googlebot"
+    },
+    {
+      "id": "apple-applebot-extended",
+      "name": "Applebot-Extended",
+      "operator": "Apple",
+      "class": "training_crawler",
+      "userAgentTokens": [],
+      "robotsTokens": [
+        "Applebot-Extended"
+      ],
+      "respectsRobots": "yes",
+      "purpose": "robots.txt token controlling use of crawled data to train Apple's foundation models; does not crawl.",
+      "published": {},
+      "docsUrl": "https://support.apple.com/en-us/119829",
+      "checkedAt": "2026-11-04",
+      "page": "https://knocklog.ai/agents/apple-applebot-extended"
+    },
+    {
+      "id": "apple-applebot",
+      "name": "Applebot",
+      "operator": "Apple",
+      "class": "search_engine",
+      "userAgentTokens": [
+        "Applebot"
+      ],
+      "robotsTokens": [
+        "Applebot"
+      ],
+      "respectsRobots": "yes",
+      "purpose": "Apple's crawler for Siri, Spotlight and Safari search features.",
+      "published": {
+        "ipRangeUrls": [
+          "https://search.developer.apple.com/applebot.json"
+        ],
+        "reverseDnsSuffixes": [
+          ".applebot.apple.com"
+        ]
+      },
+      "docsUrl": "https://support.apple.com/en-us/119829",
+      "checkedAt": "2026-11-04",
+      "page": "https://knocklog.ai/agents/apple-applebot"
+    },
+    {
+      "id": "microsoft-bingbot",
+      "name": "Bingbot",
+      "operator": "Microsoft",
+      "class": "search_engine",
+      "userAgentTokens": [
+        "bingbot"
+      ],
+      "robotsTokens": [
+        "bingbot"
+      ],
+      "respectsRobots": "yes",
+      "purpose": "Bing search crawler; its index also grounds Copilot answers.",
+      "published": {
+        "ipRangeUrls": [
+          "https://www.bing.com/toolbox/bingbot.json"
+        ],
+        "reverseDnsSuffixes": [
+          ".search.msn.com"
+        ]
+      },
+      "docsUrl": null,
+      "checkedAt": "2026-11-04",
+      "page": "https://knocklog.ai/agents/microsoft-bingbot"
+    },
+    {
+      "id": "meta-externalfetcher",
+      "name": "Meta-ExternalFetcher",
+      "operator": "Meta",
+      "class": "user_action_agent",
+      "userAgentTokens": [
+        "meta-externalfetcher"
+      ],
+      "robotsTokens": [
+        "meta-externalfetcher"
+      ],
+      "respectsRobots": "no",
+      "purpose": "Fetches individual links at a user's request, including for agentic AI tasks.",
+      "published": {},
+      "docsUrl": "https://developers.facebook.com/docs/sharing/webmasters/web-crawlers",
+      "checkedAt": "2026-11-04",
+      "page": "https://knocklog.ai/agents/meta-externalfetcher"
+    },
+    {
+      "id": "meta-webindexer",
+      "name": "Meta-WebIndexer",
+      "operator": "Meta",
+      "class": "ai_search_crawler",
+      "userAgentTokens": [
+        "meta-webindexer"
+      ],
+      "robotsTokens": [
+        "meta-webindexer"
+      ],
+      "respectsRobots": "yes",
+      "purpose": "Analyzes content to improve Meta AI search results and citations.",
+      "published": {},
+      "docsUrl": "https://developers.facebook.com/docs/sharing/webmasters/web-crawlers",
+      "checkedAt": "2026-11-04",
+      "page": "https://knocklog.ai/agents/meta-webindexer"
+    },
+    {
+      "id": "meta-externalagent",
+      "name": "Meta-ExternalAgent",
+      "operator": "Meta",
+      "class": "training_crawler",
+      "userAgentTokens": [
+        "meta-externalagent"
+      ],
+      "robotsTokens": [
+        "meta-externalagent"
+      ],
+      "respectsRobots": "yes",
+      "purpose": "Crawls for training foundation AI models and product indexing.",
+      "published": {},
+      "docsUrl": "https://developers.facebook.com/docs/sharing/webmasters/web-crawlers",
+      "checkedAt": "2026-11-04",
+      "page": "https://knocklog.ai/agents/meta-externalagent"
+    },
+    {
+      "id": "meta-facebookexternalhit",
+      "name": "FacebookExternalHit",
+      "operator": "Meta",
+      "class": "preview_fetcher",
+      "userAgentTokens": [
+        "facebookexternalhit"
+      ],
+      "robotsTokens": [
+        "facebookexternalhit"
+      ],
+      "respectsRobots": "partial",
+      "purpose": "Fetches shared links to build previews (title, description, thumbnail).",
+      "published": {},
+      "docsUrl": "https://developers.facebook.com/docs/sharing/webmasters/web-crawlers",
+      "checkedAt": "2026-11-04",
+      "page": "https://knocklog.ai/agents/meta-facebookexternalhit"
+    },
+    {
+      "id": "commoncrawl-ccbot",
+      "name": "CCBot",
+      "operator": "Common Crawl",
+      "class": "training_crawler",
+      "userAgentTokens": [
+        "CCBot"
+      ],
+      "robotsTokens": [
+        "CCBot"
+      ],
+      "respectsRobots": "unknown",
+      "purpose": "Builds the Common Crawl open web archive, widely used as AI training data.",
+      "published": {},
+      "docsUrl": null,
+      "checkedAt": "2026-11-04",
+      "page": "https://knocklog.ai/agents/commoncrawl-ccbot"
+    },
+    {
+      "id": "bytedance-bytespider",
+      "name": "Bytespider",
+      "operator": "ByteDance",
+      "class": "training_crawler",
+      "userAgentTokens": [
+        "Bytespider"
+      ],
+      "robotsTokens": [
+        "Bytespider"
+      ],
+      "respectsRobots": "unknown",
+      "purpose": "ByteDance crawler associated with AI model data collection.",
+      "published": {},
+      "docsUrl": null,
+      "checkedAt": "2026-11-04",
+      "page": "https://knocklog.ai/agents/bytedance-bytespider"
+    },
+    {
+      "id": "amazon-amazonbot",
+      "name": "Amazonbot",
+      "operator": "Amazon",
+      "class": "ai_search_crawler",
+      "userAgentTokens": [
+        "Amazonbot"
+      ],
+      "robotsTokens": [
+        "Amazonbot"
+      ],
+      "respectsRobots": "unknown",
+      "purpose": "Amazon crawler used for Alexa answers and other Amazon services.",
+      "published": {},
+      "docsUrl": null,
+      "checkedAt": "2026-11-04",
+      "page": "https://knocklog.ai/agents/amazon-amazonbot"
+    },
+    {
+      "id": "huawei-petalbot",
+      "name": "PetalBot",
+      "operator": "Huawei",
+      "class": "ai_search_crawler",
+      "userAgentTokens": [
+        "PetalBot"
+      ],
+      "robotsTokens": [
+        "PetalBot"
+      ],
+      "respectsRobots": "unknown",
+      "purpose": "Crawler for Huawei's Petal Search.",
+      "published": {},
+      "docsUrl": null,
+      "checkedAt": "2026-11-04",
+      "page": "https://knocklog.ai/agents/huawei-petalbot"
+    },
+    {
+      "id": "duckduckgo-duckassistbot",
+      "name": "DuckAssistBot",
+      "operator": "DuckDuckGo",
+      "class": "user_action_agent",
+      "userAgentTokens": [
+        "DuckAssistBot"
+      ],
+      "robotsTokens": [
+        "DuckAssistBot"
+      ],
+      "respectsRobots": "unknown",
+      "purpose": "Fetches pages to answer questions in DuckDuckGo's AI-assisted answers.",
+      "published": {},
+      "docsUrl": null,
+      "checkedAt": "2026-11-04",
+      "page": "https://knocklog.ai/agents/duckduckgo-duckassistbot"
+    },
+    {
+      "id": "mistral-user",
+      "name": "MistralAI-User",
+      "operator": "Mistral AI",
+      "class": "user_action_agent",
+      "userAgentTokens": [
+        "MistralAI-User"
+      ],
+      "robotsTokens": [
+        "MistralAI-User"
+      ],
+      "respectsRobots": "unknown",
+      "purpose": "Fetches pages when Le Chat users ask questions.",
+      "published": {},
+      "docsUrl": null,
+      "checkedAt": "2026-11-04",
+      "page": "https://knocklog.ai/agents/mistral-user"
+    }
+  ]
+}

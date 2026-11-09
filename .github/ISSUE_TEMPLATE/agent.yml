@@ -1,0 +1,15 @@
+name: New agent or correction
+description: Add an AI agent or crawler, or fix an entry
+labels: [agent]
+body:
+  - type: input
+    id: name
+    attributes: { label: Agent name and operator, placeholder: "ExampleBot by Example Inc." }
+    validations: { required: true }
+  - type: input
+    id: docs
+    attributes: { label: Official documentation URL, description: The operator's own page describing the agent. Required. }
+    validations: { required: true }
+  - type: textarea
+    id: details
+    attributes: { label: What should change, description: "User-Agent, robots.txt token, purpose, IP ranges or other published details." }
