@@ -2,7 +2,7 @@
 
 Which AI agents and crawlers visit websites, who runs them, what they do, the name each one obeys in robots.txt, and what its operator publishes so you can tell the real agent from an impostor. Every entry links to the operator's own documentation and says when it was last checked.
 
-Maintained by [Knocklog](https://knocklog.ai/agents), the analytics for AI agents. Data in [`agents.json`](agents.json) and [`agents.csv`](agents.csv) (schema in [`schema.json`](schema.json)). Last checked: 2026-11-04. 26 agents.
+Maintained by [Knocklog](https://knocklog.ai/agents), the analytics for AI agents. Data in [`agents.json`](agents.json) and [`agents.csv`](agents.csv) (schema in [`schema.json`](schema.json)). Last checked: 2026-11-09. 26 agents.
 
 > Em português: [diretório de agentes de IA](https://knocklog.ai/agentes) e o guia [como saber quais agentes de IA visitam o meu site](https://knocklog.ai/guia/como-saber-quais-agentes-de-ia-visitam-meu-site).
 

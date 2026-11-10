@@ -80,6 +80,25 @@
                   "format": "uri"
                 }
               },
+              "documentedIpRanges": {
+                "type": "array",
+                "description": "IP prefixes the operator documents on a page without a machine-readable list",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "url": {
+                      "type": "string",
+                      "format": "uri"
+                    },
+                    "cidrs": {
+                      "type": "array",
+                      "items": {
+                        "type": "string"
+                      }
+                    }
+                  }
+                }
+              },
               "reverseDnsSuffixes": {
                 "type": "array",
                 "items": {
